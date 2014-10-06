@@ -8,7 +8,13 @@ router.get('/', function(req, res) {
 
 /*GET store page */
 router.get('/store', function(req, res) {
-    res.render('store');
+	var db = req.db;
+	var collection = db.collection('shirtscollection');
+	collection.find().toArray(function(e, results) {
+		res.render('store', {
+			'shirtscollection': results
+		});
+	});
 });
 
 module.exports = router;

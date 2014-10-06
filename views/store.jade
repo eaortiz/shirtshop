@@ -3,3 +3,11 @@ extends layout
 block content
 	h1 Shirt Shop
 	p If you give us money, we will give you shirts!
+
+	h1 Store
+	each shirt in shirtscollection
+		div.shirt-element
+			p.name #{shirt.name}
+			p.price #{shirt.price}
+
+			img(src = shirt.image)

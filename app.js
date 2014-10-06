@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongo = require('mongodb');
+var MongoClient = require('mongodb').MongoClient, format = require('util').format;
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -21,6 +24,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+app.use(function(req,res,next){   
+    MongoClient.connect('mongodb://127.0.0.1:27017/shirtshopdb', function(err, db) {
+        if(err) throw err;
+        req.db = db;
+        next();
+    }); 
+});
 
 app.use('/', routes);
 app.use('/users', users);
