@@ -25,7 +25,7 @@ router.post('/newshirt', function(req, res) {
 	var db = req.db;
 	var collection = db.collection('shirtscollection');
 	collection.insert({'name': name, 'price': price, 'image': image}, function(err, result) {
-		res.redirect('/store');	
+		res.redirect('/store');
 	});
 });
 
