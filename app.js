@@ -27,12 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.use(function(req,res,next){   
+app.use(function(req,res,next){
     MongoClient.connect('mongodb://127.0.0.1:27017/shirtshopdb', function(err, db) {
         if(err) throw err;
         req.db = db;
         next();
-    }); 
+    });
 });
 
 app.use('/', routes);

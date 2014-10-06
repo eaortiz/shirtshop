@@ -17,4 +17,16 @@ router.get('/store', function(req, res) {
 	});
 });
 
+/*POST new shirt*/
+router.post('/newshirt', function(req, res) {
+	var name = req.body.name;
+	var price = req.body.price;
+	var image = req.body.url;
+	var db = req.db;
+	var collection = db.collection('shirtscollection');
+	collection.insert({'name': name, 'price': price, 'image': image}, function(err, result) {
+		res.redirect('/store');	
+	});
+});
+
 module.exports = router;

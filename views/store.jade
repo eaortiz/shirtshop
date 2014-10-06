@@ -11,3 +11,16 @@ block content
 			p.price #{shirt.price}
 
 			img(src = shirt.image)
+
+
+	h1 Add a New Shirt to the Store
+	div.new-shirt-form
+		form(name = 'newshirt', action = '/newshirt', method = 'post')
+			p Shirt Name
+			input(type = 'text', name = 'name')
+			p Price
+			input(type = 'text', name = 'price')
+			p Image Url
+			input(type = 'text', name = 'url')
+			div
+				input(type = 'submit', value = 'New Shirt')
