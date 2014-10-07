@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
-var MongoClient = require('mongodb').MongoClient, format = require('util').format;
+var MongoClient = require('mongodb').MongoClient
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

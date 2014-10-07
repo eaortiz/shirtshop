@@ -15,12 +15,12 @@ img.logo {
 }
 
 /*Shirt Element*/
-div.shirt-element img { 
+div.shirt-element img {
 	height: 80%;
 	width: 90%;
 }
 
-div.shirt-element { 
+div.shirt-element {
 	display: inline-block;
 	padding: 20px;
 	text-transform: uppercase;
@@ -42,14 +42,14 @@ div.shirt-element:hover {
 	display: inline-block;
 	text-align: left;
 }
-.price { 
+.price {
 	width: 30%;
 	display: inline-block;
 	text-align: right;
 }
 
 /*Shirt Form*/
-div.new-shirt-form { 
+div.new-shirt-form {
 	font-size: 20px;
 	padding: 5px;
 }
@@ -58,11 +58,11 @@ div.new-shirt-form p {
 	margin: 0;
 }
 
-input[type=text] { 
+input[type=text] {
 	font-size: 20px;
 	margin: 10px 0px;
 }
-input[type=submit] { 
+input[type=submit] {
 	background-image: url('/images/shirtshopbutton.png');
 	background-size: 200px;
 	width: 200px;

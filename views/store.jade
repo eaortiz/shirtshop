@@ -6,8 +6,8 @@ block content
 		div.shirt-element
 			p.name #{shirt.name}
 			p.price #{shirt.price}
-
-			img(src = shirt.image)
+			a(href = '/shirt/#{shirt._id}')
+				img(src = shirt.image)
 
 
 	h1 Add a New Shirt to the Store

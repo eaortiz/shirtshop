@@ -28,7 +28,7 @@ public/images, javascript & stylesheets -> Other Resources
 ###Starting up the App
 	npm install
 	npm install -g nodemon
-	nodemon app.js
+	nodemon
 	
 ###Store Route
 Controller
@@ -72,7 +72,7 @@ In store.jade
 In app.js
 
 	var mongo = require('mongodb');
-	var MongoClient = require('mongodb').MongoClient, format = require('util').format;
+	var MongoClient = require('mongodb').MongoClient
 	...
 	app.use(function(req,res,next){    
 		MongoClient.connect('mongodb://127.0.0.1:27017/shirtshopdb', function(err, db) {

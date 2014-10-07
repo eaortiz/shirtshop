@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	p #{shirt.name}
+	div.shirt-element
+		p.name #{shirt.name} 
+		p.price #{shirt.price}
+		a(href = '/shirt/#{shirt._id}')
+			img(src = shirt.image)
